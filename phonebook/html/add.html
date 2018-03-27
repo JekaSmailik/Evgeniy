@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Данные контакта</title>
+    <style>
+        table {
+            margin: auto; /*Выравнивает таблицу по центру окна*/
+        }
+    </style>
+</head>
+<body>
+<p>
+    <a href="/spisok" name="spisok">назад</a>
+</p>
+<form action="/newsave" method="post">
+    <div>
+        <table>
+            <tr>
+            {{add}}
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <input type="hidden" name="surname" value="{{surname}}">
+                    <input type="hidden" name="name" value="{{name}}">
+                    <input type="tel" name="telphone" placeholder="номер телефона" required>
+                    <input type="submit" value="добавить" width="90%">
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+</body>
+</html>
+

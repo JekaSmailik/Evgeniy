@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список</title>
+    <style>
+        table {
+            margin: auto; /*Выравнивает таблицу по центру окна*/
+        }
+
+        a {
+            text-decoration: none /*Убирает подчеркивание у ссылок*/
+        }
+    </style>
+</head>
+</bod>
+<div>
+    <a href="/phonebook" name="phonebook">назад</a>
+</div>
+<div>
+    <table border="1" cellpadding="5">
+        <th width="100%" colspan="100%"><h2>Список всех контактов</h2></th>
+        <tr>
+            <td align="center">
+                <a href="/spisok?sortSurname={{sortSurname}}" title="Нажмите для сортировки контактов по алфавиту">Фамилия</a>
+            </td>
+            <td align="center"><a href="/spisok?sortName={{sortName}}" title="Нажмите для сортировки контактов по алфавиту">Имя</a></td>
+            <td align="center" colspan="100%">Телефоны</td>
+        </tr>
+        <tr>
+        {{html}}
+        </tr>
+    </table>
+</div>
+<table>
+    <tr>
+        <td>
+        {{sortListSurname}}
+        </td>
+    </tr>
+</table>
+</body>
+</html>

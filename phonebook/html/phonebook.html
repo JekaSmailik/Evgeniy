@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Телефонная книга</title>
+    <style>
+        table {margin: auto; /*Выравнивает таблицу по центру окна*/}
+        a {text-decoration: none /*Убирает подчеркивание у ссылок*/}
+    </style>
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <th width="50%" colspan="2"><h2>Телефонная книга</h2></th>
+        </tr>
+    </table>
+</div>
+<table>
+    <tr>
+        <td>
+            <form action="/phonebook" method="post">
+                <div>
+                    <input type="text" name="surname" placeholder="Фамилия" required><br>
+                    <input type="text" name="name" placeholder="Имя" required><br>
+                    <!-- не работает определение телефона pattern -->
+                    <p><input type="tel" name="telphone" pattern="+7[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                              placeholder="номер телефона" required>
+                        <!-- не работает ширина воода цифр
+                        <input type="number" size="0" name="number" min="1" max="10" value="1"> --></p>
+                    <!-- <img src="123.gif" style="vertical-align:middle" width="50" height="50"> -->
+                    <input type="submit" value="добавить" width="90%">
+                </div>
+                <p></p>
+            </form>
+        </td>
+    </tr>
+</table>
+<div>
+    <table>
+        <tr>
+            <th><a href="/spisok" name="spisok">список всех контактов</a>
+        </tr>
+    </table>
+</div>
+<div>
+    <table>
+          <tr>
+              <br>
+              <td>{{alreadyExists}}</td><br>
+              <td>{{addNewContact}}</td><br>
+              <td>{{Сonnected}}</td><br>
+              <td>{{addNewTelephone}}</td><br>
+          </tr>
+    </table>
+</div>
+</body>
+</html>
